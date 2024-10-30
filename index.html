@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Previsão do Tempo</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="city-input" class="form-control" placeholder="Digite o nome da cidade" autocomplete="off">
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="search-button">Buscar</button>
+            </div>
+        </div>
+        <div id="weather-info" class="results" style="display: none;">
+            <h5 class="card-title" id="temperature"></h5>
+            <p class="card-text" id="description"></p>
+            <p class="card-text" id="humidity"></p>
+        </div>
+        <div id="weather-image" class="text-center"></div>
+        <div id="suggestions" class="suggestions-list"></div>
+
+        <!-- Contêiner para a previsão do tempo -->
+        <div id="forecast-container" class="forecast-results"></div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hendryw e Rian. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/imagens.js"></script>
+    <script src="./JS/previsao.js"></script>
+</body>
+</html>

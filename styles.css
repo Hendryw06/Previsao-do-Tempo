@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: background 0.5s ease;
+    display: flex;
+    flex-direction: column; /* Adiciona direção de coluna */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    min-height: 100vh; /* Garante que ocupe a altura total da tela */
+    margin: 0;
+    padding-top: 30px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px; /* Aumenta a largura máxima */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px; /* Aumenta o padding para mais espaço interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Centraliza horizontalmente */
+    flex-grow: 1; /* Permite que o contêiner cresça */
+}
+
+.title {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#weather-image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha de baixo se não houver espaço */
+    margin-top: 20px;
+}
+
+#weather-image img,
+#weather-image svg {
+    max-width: 80px; /* Ajuste o tamanho máximo das imagens aqui */
+    height: auto;
+    margin: 0 10px; /* Espaçamento entre as imagens */
+    transition: all 0.3s ease;
+}
+
+#weather-image img:hover,
+#weather-image svg:hover {
+    transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
+}
+
+#suggestions {
+    position: relative;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 30px);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* Oculto inicialmente */
+    margin-top: 10px;
+}
+
+.suggestions-list div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list div:hover {
+    background: #f0f0f0;
+}
+
+#weather-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-title, .card-text {
+    margin: 0;
+}
+
+#forecast-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-top: 20px;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+}
